@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-items-center content-center justify-center">
+  <div class="flex justify-items-center content-center justify-center mb-6">
     <BBtn
       v-for="(btn, i) in $attrs.buttons"
       :key="i"

@@ -1,6 +1,6 @@
 <template>
   <button
-    class="hover:opacity-75 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
+    class="hover:opacity-75 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow-md w-full md:max-w-xs mx-6"
     :style="{
       backgroundColor:
         $store.state.appCustomData.globalProps.colors[

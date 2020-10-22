@@ -9,6 +9,7 @@
   "dependencies": {
     "tailwindcss": "^1.9.4",
     "vue": "next",
+    "vue-feather-icons": "^5.1.0",
     "vue-router": "^4.0.0-beta.13",
     "vuex": "^4.0.0-beta.2"
   },

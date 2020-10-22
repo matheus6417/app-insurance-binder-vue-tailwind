@@ -1,9 +1,12 @@
 import { createApp } from 'vue'
 import './assets/main.css'
 import App from './App.vue'
+import store from './store'
 import { routes } from './routes.js'
 import { createRouter, createWebHistory } from 'vue-router'
 let app = createApp(App)
+
+
 let router = createRouter({
   history: createWebHistory(),
   routes: import.meta.hot ? [] : routes,
@@ -25,8 +28,7 @@ if (import.meta.hot) {
     router.replace('')
   })
 }
-
-
+app.use(store)
 app.use(router)
 
 app.mount('#app')

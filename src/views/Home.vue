@@ -26,7 +26,7 @@ export default {
     },
     renderBlocks() {
       return this.storeCustomData.steps[
-        this.$store.state.currentPage
+        this.$store.state.currentStep
       ].components.map((component) => {
         return {
           id: component.id,

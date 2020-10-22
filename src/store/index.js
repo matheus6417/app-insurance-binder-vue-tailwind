@@ -1,7 +1,7 @@
 import { createStore, createLogger, } from 'vuex'
 export default createStore({
   state: {
-    currentPage: 0,
+    currentStep: 0,
     appCustomData: {
       globalProps: {
         colors: {
@@ -270,5 +270,10 @@ export default createStore({
         },
       },
     },
+  },
+  mutations: {
+    changeStep(state, action) {
+      action === 'nextstep' ? state.currentStep++ : state.currentStep--
+    }
   }
 });  

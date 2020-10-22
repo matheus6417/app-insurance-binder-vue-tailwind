@@ -4,6 +4,7 @@ export default createStore({
     currentStep: 0,
     appCustomData: {
       globalProps: {
+        logoSrc: 'img/logo.png',
         colors: {
           blue_default: {
             name: 'blue',
@@ -62,9 +63,6 @@ export default createStore({
           name: 'Form',
           components: [
             {
-              id: 'BLogo',
-            },
-            {
               id: 'BQuestion-insurancetype',
             },
             {
@@ -82,9 +80,6 @@ export default createStore({
           name: 'Quotes',
           components: [
             {
-              id: 'BLogo',
-            },
-            {
               id: 'BTitle-quotes',
             },
             {
@@ -98,9 +93,6 @@ export default createStore({
         {
           name: 'Thank you',
           components: [
-            {
-              id: 'BLogo',
-            },
             {
               id: 'BTitle-thankyou',
             },
@@ -148,11 +140,6 @@ export default createStore({
             ]
           },
           component: 'BButtons',
-        },
-        'BLogo': {
-          src: 'molecules/BLogo.vue',
-          props: {},
-          component: 'BLogo',
         },
         'BQuestion-insurancetype': {
           src: 'organisms/BQuestion.vue',

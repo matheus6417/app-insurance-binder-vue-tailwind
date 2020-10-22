@@ -1,11 +1,13 @@
 <template>
-  <div class="flex mb-3 mx-auto">
+  <div class="flex mb-5 mx-auto">
     <BAvatar :size="'8'" class="mr-5">
       <div class="m-auto">
         {{ item.icon }}
       </div>
     </BAvatar>
-    {{ item.text }}
+    <div :class="`text-${item.size ? item.size : 'base'}`">
+      {{ item.text }}
+    </div>
   </div>
 </template>
 

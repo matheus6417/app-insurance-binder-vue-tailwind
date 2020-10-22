@@ -6,14 +6,22 @@
         icon: $attrs.icon,
       }"
     ></BListItem>
-    {{ $attrs }}
+    <template v-if="$attrs.type === 'options'">
+      <BOption
+        v-for="(option, i) in $attrs.options"
+        :key="i"
+        :option="option"
+      ></BOption>
+    </template>
   </div>
 </template>
 
 <script>
 import BListItem from "../molecules/BListItem.vue";
+import BOption from "../molecules/BOption.vue";
 export default {
   components: {
+    BOption,
     BListItem,
   },
   name: "BQuestion",

@@ -1,9 +1,7 @@
 <template>
   <div class="flex mb-5 mx-auto">
     <BAvatar :size="'8'" class="mr-5">
-      <div class="m-auto">
-        {{ item.icon }}
-      </div>
+      {{ item.icon }}
     </BAvatar>
     <div :class="`text-${item.size ? item.size : 'base'}`">
       {{ item.text }}

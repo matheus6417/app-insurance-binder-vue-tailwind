@@ -7,13 +7,16 @@
         backgroundColor:
           $store.state.appCustomData.globalProps.colors[
             $attrs.bgColor ? $attrs.bgColor : 'secondary_default'
-          ].color,color:
+          ].color,
+        color:
           $store.state.appCustomData.globalProps.colors[
             $attrs.bgColor ? $attrs.bgColor : 'blue_default'
           ].color,
       }"
     >
-      <slot>
+      <div class="m-auto">
+        <slot></slot>
+      </div>
     </div>
   </div>
 </template>

@@ -29,7 +29,7 @@
             </svg>
           </div>
         </div>
-        <div class="m-auto overflow-scroll" style="min-height: 480px">
+        <div class="m-auto overflow-scroll md:h-auto" style="height: 480px">
           <slot></slot>
         </div>
       </div>

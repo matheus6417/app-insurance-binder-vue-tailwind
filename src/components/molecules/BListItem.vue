@@ -3,7 +3,7 @@
     <BAvatar :size="'8'" class="mr-5">
       {{ item.icon }}
     </BAvatar>
-    <div :class="`text-${item.size ? item.size : 'base'}`">
+    <div v-if="item.text" :class="`text-${item.size ? item.size : 'base'}`">
       {{ item.text }}
     </div>
   </div>

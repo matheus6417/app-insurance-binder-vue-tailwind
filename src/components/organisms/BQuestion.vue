@@ -4,6 +4,7 @@
       :item="{
         text: $attrs.text,
         icon: $attrs.icon,
+        size: '4x1',
       }"
     ></BListItem>
     <template v-if="$attrs.type === 'options'">

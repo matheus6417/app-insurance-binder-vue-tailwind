@@ -1,13 +1,11 @@
 <template>
-  <div>
-    <BModal>
-      <Molecule
-        v-for="renderBlock in renderBlocks"
-        :key="renderBlock.id"
-        :render-block="renderBlock"
-      />
-    </BModal>
-  </div>
+  <BModal>
+    <Molecule
+      v-for="renderBlock in renderBlocks"
+      :key="renderBlock.id"
+      :render-block="renderBlock"
+    />
+  </BModal>
 </template>
 <script>
 import Molecule from "../system/Molecule.vue";

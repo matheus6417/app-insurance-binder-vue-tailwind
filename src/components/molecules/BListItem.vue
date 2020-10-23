@@ -4,7 +4,6 @@
       {{ item.icon }}
     </BAvatar>
     <div class="my-auto">
-
       {{ item.text }}
     </div>
   </div>

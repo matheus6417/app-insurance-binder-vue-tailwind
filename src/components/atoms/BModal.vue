@@ -19,7 +19,10 @@
             <BIcon :icon="'x'"></BIcon>
           </div>
         </div>
-        <div class="m-auto overflow-y-scroll md:h-auto pb-32 pt-10 md:h-auto px-6" style="height: 580px">
+        <div
+          class="m-auto overflow-y-auto md:h-auto pb-32 pt-10 md:h-auto px-6"
+          style="height: 580px"
+        >
           <slot></slot>
         </div>
       </div>
@@ -28,7 +31,7 @@
 </template>
 
 <script>
-import BIcon from './BIcon.vue';
+import BIcon from "./BIcon.vue";
 export default {
   components: {
     BIcon,

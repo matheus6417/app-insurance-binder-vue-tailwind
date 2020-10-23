@@ -15,24 +15,27 @@
             $attrs.color ? $attrs.color : 'secondary_default'
           ].color,
       }"
-       :class="inputData ?  'bg-white' : 'opacity-50 cursor-not-allowed'"
+      :class="inputData ? 'bg-white' : 'opacity-50 cursor-not-allowed'"
       :disable="!inputData"
       @click.once="inputData ? $emit('change', inputData) : void 0"
     >
-        <span class="mr-2"
+      <span
+        class="mr-2"
         :style="{
-        color:
-          $store.state.appCustomData.globalProps.colors[
-            $attrs.color ? $attrs.color : 'blue_default'
-          ].color,
-      }">OK</span>
-        <BIcon :icon="'check'" :color="'blue_default'"></BIcon>
+          color:
+            $store.state.appCustomData.globalProps.colors[
+              $attrs.color ? $attrs.color : 'blue_default'
+            ].color,
+        }"
+        >OK</span
+      >
+      <BIcon :icon="'check'" :color="'blue_default'"></BIcon>
     </button>
   </div>
 </template>
 
 <script>
-import BIcon from './BIcon.vue';
+import BIcon from "./BIcon.vue";
 export default {
   components: {
     BIcon,

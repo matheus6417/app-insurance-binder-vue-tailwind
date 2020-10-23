@@ -1,6 +1,6 @@
 <template>
   <div
-    class="mb-20 mx-auto w-full md:max-w-2xltext-3x1"
+    class="mb-20 mx-auto w-full md:max-w-2x1 text-3x1"
     :class="isCurrentQuestionFocused ? '' : 'opacity-25 pointer-events-none'"
   >
     <BListItem
@@ -22,9 +22,7 @@
       </div>
     </template>
     <template v-if="$attrs.type === 'text'">
-      <BInput
-          @change.once="setFormAnswer"
-      ></BInput>
+      <BInput @change.once="setFormAnswer"></BInput>
     </template>
   </div>
 </template>
@@ -41,18 +39,27 @@ export default {
   },
   name: "BQuestion",
   methods: {
-    setFormAnswer(answer){
+    setFormAnswer(answer) {
       this.$store.commit("setFormAnswer", {
         questionID: this.$attrs.uid,
-        answer: answer
+        answer: answer,
       });
-      this.$store.commit('changeCurrentQuestion', this.$store.state.currentQuestion + 1)
-    }
+      this.$store.commit(
+        "changeCurrentQuestion",
+        this.$store.state.currentQuestion + 1
+      );
+    },
   },
   computed: {
     isCurrentQuestionFocused() {
-      return this.$store.getters.questionItems.findIndex(question => question.id === this.$attrs.uid) + 1 === this.$store.state.currentQuestion;
-    }
+      return (
+        this.$store.getters.questionItems.findIndex(
+          (question) => question.id === this.$attrs.uid
+        ) +
+          1 ===
+        this.$store.state.currentQuestion
+      );
+    },
   },
 };
 </script>

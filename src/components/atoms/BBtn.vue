@@ -1,6 +1,6 @@
 <template>
   <button
-    class="hover:opacity-75 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow-md w-full md:max-w-xs "
+    class="hover:opacity-75 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow-md w-full md:max-w-xs"
     :style="{
       backgroundColor:
         $store.state.appCustomData.globalProps.colors[
@@ -12,7 +12,6 @@
     @click="isValid ? clickAction(action) : void 0"
   >
     {{ text }}
-    {{}}
   </button>
 </template>
 

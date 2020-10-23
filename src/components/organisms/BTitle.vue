@@ -1,5 +1,7 @@
 <template>
-  <div class="flex-col justify-center align-center text-center mb-10 max-w-md mx-auto">
+  <div
+    class="flex-col justify-center align-center text-center mb-10 max-w-md mx-auto"
+  >
     <BAvatar v-bind="$attrs" class="mb-4">
       <BIcon :icon="$attrs.icon" :size="60"></BIcon>
     </BAvatar>

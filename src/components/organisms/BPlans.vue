@@ -10,7 +10,9 @@
         <div
           class="bg-white rounded p-4 flex-col shadow hover:shadow-md w-full text-center"
           :class="
-            planSelected === i ? 'border-blue-500 border-4' : 'border-2 border-gray-400'
+            planSelected === i
+              ? 'border-blue-500 border-4'
+              : 'border-2 border-gray-400'
           "
         >
           <div class="my-2 h-12 flex">
@@ -44,10 +46,10 @@ export default {
   components: {
     BBtn,
   },
-  data(){
+  data() {
     return {
-      planSelected: null
-    }
+      planSelected: null,
+    };
   },
   name: "BPlans",
 };

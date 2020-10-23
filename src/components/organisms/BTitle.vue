@@ -1,9 +1,9 @@
 <template>
-  <div class="flex-col justify-center align-center text-center mb-8">
+  <div class="flex-col justify-center align-center text-center mb-10">
     <BAvatar v-bind="$attrs" class="mb-4">
-      <BIcon :icon="$attrs.icon" : :size="'12'"></BIcon>
+      <BIcon :icon="$attrs.icon" :size="60"></BIcon>
     </BAvatar>
-    <div class="text-4xl">{{ $attrs.title }}</div>
+    <div class="text-4xl text-bold">{{ $attrs.title }}</div>
   </div>
 </template>
 

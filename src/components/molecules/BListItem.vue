@@ -1,9 +1,10 @@
 <template>
   <div class="flex mb-5 mx-auto">
-    <BAvatar :size="'8'" class="mr-5">
+    <BAvatar :size="'10'" class="mr-5">
       {{ item.icon }}
     </BAvatar>
-    <div v-if="item.text" :class="`text-${item.size ? item.size : 'base'}`">
+    <div class="my-auto">
+
       {{ item.text }}
     </div>
   </div>

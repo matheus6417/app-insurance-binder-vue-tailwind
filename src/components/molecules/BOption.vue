@@ -1,18 +1,16 @@
 <template>
-  <div class="flex mb-5 mx-auto">
-    <div class="w-full">
-      <div class="border border-gray-400 bg-white rounded p-5 flex shadow">
-        <BIcon class="mr-4" :size="'8'" :icon="option.icon"> </BIcon>
+  <div class="flex mx-auto w-full cursor-pointer" @click="$emit('change', option.title)">
+      <div class="border border-gray-400 bg-white rounded p-4 flex shadow hover:shadow-md  w-full">
+        <BIcon class="mr-4 my-auto" :size="26" :icon="option.icon"> </BIcon>
         <div>
           <div class="text-gray-900 font-bold text-xl">
             {{ option.title }}
           </div>
-          <div>
+          <div class="text-xs">
             {{ option.text }}
           </div>
         </div>
       </div>
-    </div>
   </div>
 </template>
 
@@ -24,7 +22,7 @@ export default {
     BIcon,
     BAvatar,
   },
-  props: ["option"],
+  props: ["option", "choosen"],
   name: "BListItem",
 };
 </script>

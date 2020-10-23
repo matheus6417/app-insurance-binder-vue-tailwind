@@ -5,13 +5,9 @@
       :class="`w-${size ? size : '24'} h-${size ? size : '24'} `"
       :style="{
         backgroundColor:
-          $store.state.appCustomData.globalProps.colors[
-            $attrs.bgColor ? $attrs.bgColor : 'secondary_default'
-          ].color,
+          $store.state.appCustomData.globalProps.colors[$attrs.bgColor ? $attrs.bgColor : 'secondary_default'].color,
         color:
-          $store.state.appCustomData.globalProps.colors[
-            $attrs.bgColor ? $attrs.bgColor : 'blue_default'
-          ].color,
+          $store.state.appCustomData.globalProps.colors[$attrs.color ? $attrs.color : 'blue_default'].color,
       }"
     >
       <div class="m-auto">

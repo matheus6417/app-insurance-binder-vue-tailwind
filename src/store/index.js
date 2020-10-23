@@ -262,17 +262,20 @@ export default createStore({
               {
                 name: 'progressive',
                 imageSrc: 'progressive',
-                priceTag: '$120/mo',
+                priceTag: '$120',
+                priceTagPeriod: 'mo',
                 subpriceTag: '$1440 per year',
               }, {
                 name: 'geico',
                 imageSrc: 'geico',
-                priceTag: '$120/mo',
+                priceTag: '$120',
+                priceTagPeriod: 'mo',
                 subpriceTag: '$1440 per year',
               }, {
                 name: 'statefarm',
                 imageSrc: 'statefarm',
-                priceTag: '$125/mo',
+                priceTag: '$125',
+                priceTagPeriod: 'mo',
                 subpriceTag: '$1500 per year',
               }
             ]

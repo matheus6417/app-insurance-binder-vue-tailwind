@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-10 mx-auto w-full md:max-w-lg px-6">
+  <div class="mb-10 mx-auto w-full md:max-w-lg">
     <BListItem
       v-for="(item, i) in $attrs.Items"
       :item="item"

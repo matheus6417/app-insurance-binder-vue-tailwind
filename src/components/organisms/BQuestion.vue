@@ -1,6 +1,6 @@
 <template>
   <div
-    class="mb-20 mx-auto w-full md:max-w-2xl px-6 text-3x1"
+    class="mb-20 mx-auto w-full md:max-w-2xltext-3x1"
     :class="isCurrentQuestionFocused ? '' : 'opacity-25 pointer-events-none'"
   >
     <BListItem

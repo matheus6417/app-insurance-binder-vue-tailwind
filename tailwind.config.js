@@ -13,7 +13,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Roboto', ...defaultTheme.fontFamily.sans],
+        sans: ['Roboto','Roboto:600', ...defaultTheme.fontFamily.sans],
       },
     },
   },

@@ -1,6 +1,7 @@
-import { createStore, createLogger, } from 'vuex'
+import { createStore } from 'vuex'
 export default createStore({
   state: {
+    formAnswers:null,
     currentStep: 0,
     currentQuestion: 1,
     appCustomData: {
@@ -234,7 +235,9 @@ export default createStore({
         },
         'BSummary-quotes': {
           src: 'organisms/BSummary.vue',
-          props: {},
+          props: {
+
+          },
           component: 'BSummary',
         },
         'BTitle-thankyou': {
@@ -267,6 +270,12 @@ export default createStore({
     },
     changeCurrentQuestion(state, step) {
       state.currentQuestion = step
-    }
+    },
+    setFormAnswer(state, data) {
+      console.log(data)
+      state.appCustomData.componentsLibrary[data.questionID].props['answer'] = data.answer
+      console.log(state.appCustomData.componentsLibrary[data.questionID].props)
+      
+    },
   }
 });  

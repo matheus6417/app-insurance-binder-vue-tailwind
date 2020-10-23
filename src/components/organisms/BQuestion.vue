@@ -11,8 +11,10 @@
       }"
     ></BListItem>
     <template v-if="$attrs.type === 'options'">
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <BOption
+          :choosen="$attrs.answer === option.title"
+          @change="setFormAnswer"
           v-for="(option, i) in $attrs.options"
           :key="i"
           :option="option"
@@ -36,6 +38,14 @@ export default {
     BListItem,
   },
   name: "BQuestion",
+  methods: {
+    setFormAnswer(answer){
+      this.$store.commit("setFormAnswer", {
+        questionID: this.$attrs.uid,
+        answer: answer
+      });
+    }
+  },
   computed: {
     isCurrentQuestionFocused() {
       return this.questionItems.findIndex(question => question.id === this.$attrs.uid) + 1 === this.$store.state.currentQuestion;

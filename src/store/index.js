@@ -2,6 +2,7 @@ import { createStore, createLogger, } from 'vuex'
 export default createStore({
   state: {
     currentStep: 0,
+    currentQuestion: 1,
     appCustomData: {
       globalProps: {
         logoSrc: 'img/logo.png',
@@ -64,9 +65,11 @@ export default createStore({
           components: [
             {
               id: 'BQuestion-insurancetype',
+              type: 'form'
             },
             {
               id: 'BQuestion-name',
+              type: 'form'
             },
             {
               id: 'BButtons-getquotes',
@@ -261,6 +264,9 @@ export default createStore({
   mutations: {
     changeStep(state, action) {
       action === 'nextstep' ? state.currentStep++ : state.currentStep--
+    },
+    changeCurrentQuestion(state, step) {
+      state.currentQuestion = step
     }
   }
 });  

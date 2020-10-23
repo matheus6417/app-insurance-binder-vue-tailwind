@@ -22,7 +22,7 @@
       </div>
     </template>
     <template v-if="$attrs.type === 'text'">
-      <BInput @setAnswer.once="setFormAnswer"></BInput>
+      <BInput @setAnswer="setFormAnswer"></BInput>
     </template>
   </div>
 </template>

@@ -3,11 +3,12 @@
     class="mb-20 mx-auto w-full md:max-w-2x1 text-3x1"
     :class="isCurrentQuestionFocused ? '' : 'opacity-25 pointer-events-none'"
   >
-    <BListItem
-      class="mb-12 text-3x1"
+    <BListItem 
+      class="mb-12"
       :item="{
         text: $attrs.text,
         icon: $attrs.icon,
+        fontStyle: 'font-size: 2rem; font-weight: 600'
       }"
     ></BListItem>
     <template v-if="$attrs.type === 'options'">

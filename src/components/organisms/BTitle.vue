@@ -5,7 +5,7 @@
     <BAvatar v-bind="$attrs" class="mb-4">
       <BIcon :icon="$attrs.icon" :size="60"></BIcon>
     </BAvatar>
-    <div class="text-4xl text-bold">{{ $attrs.title }}</div>
+    <div class="text-4xl" style="font-weight:600">{{ $attrs.title }}</div>
     <div class="text-lg" v-if="$attrs.text">{{ $attrs.text }}</div>
   </div>
 </template>

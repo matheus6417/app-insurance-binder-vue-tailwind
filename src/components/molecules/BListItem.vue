@@ -1,11 +1,9 @@
 <template>
   <div class="flex mb-5 mx-auto">
-    <BAvatar :size="'10'" class="mr-5">
+    <BAvatar :size="'10'" class="mr-5 my-auto">
       {{ item.icon }}
     </BAvatar>
-    <div class="my-auto">
-      {{ item.text }}
-    </div>
+    <p class="my-auto" :style="item.fontStyle">{{ item.text }}</p>
   </div>
 </template>
 

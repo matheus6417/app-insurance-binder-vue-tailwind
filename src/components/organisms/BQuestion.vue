@@ -4,7 +4,7 @@
     :class="isCurrentQuestionFocused ? '' : 'opacity-25 pointer-events-none'"
   >
     <BListItem
-      class="mb-12 text-4x1"
+      class="mb-12 text-3x1"
       :item="{
         text: $attrs.text,
         icon: $attrs.icon,

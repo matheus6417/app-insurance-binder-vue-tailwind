@@ -11,14 +11,15 @@ module.exports = {
     ],
   },
   theme: {
-    extend: {
-      fontFamily: {
-        sans: ['Roboto','Roboto:600', ...defaultTheme.fontFamily.sans],
-      },
+    fontFamily: {
+      sans: '"Roboto"',
+      display: ['"Roboto"', '"sans-serif"'],
+      body: ['"Roboto"', '"sans-serif"'],
     },
+    extend: {}
   },
   future: {
     removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: false,
+    purgeLayersByDefault: true,
   },
 }

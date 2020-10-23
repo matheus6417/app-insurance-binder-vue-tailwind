@@ -1,6 +1,6 @@
 <template>
   <div
-    class="mb-8 mx-auto w-full md:max-w-2xl px-6 text-3x1"
+    class="mb-20 mx-auto w-full md:max-w-2xl px-6 text-3x1"
     :class="isCurrentQuestionFocused ? '' : 'opacity-25 pointer-events-none'"
   >
     <BListItem
@@ -51,11 +51,8 @@ export default {
   },
   computed: {
     isCurrentQuestionFocused() {
-      return this.questionItems.findIndex(question => question.id === this.$attrs.uid) + 1 === this.$store.state.currentQuestion;
-    },
-    questionItems(){
-      return this.$store.state.appCustomData.steps.filter(step => step.name === 'Form')[0].components.filter(component => component.type === 'form')
-    },
+      return this.$store.getters.questionItems.findIndex(question => question.id === this.$attrs.uid) + 1 === this.$store.state.currentQuestion;
+    }
   },
 };
 </script>

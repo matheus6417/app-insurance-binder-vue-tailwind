@@ -310,6 +310,12 @@ export default createStore({
       },
     },
   },
+  getters:{
+    questionItems(state) {
+      return state.appCustomData.steps.filter(step => step.name === 'Form')[0].components.filter(component => component.type === 'form')
+    }
+
+  },
   mutations: {
     changeStep(state, action) {
       action === 'nextstep' ? state.currentStep++ : state.currentStep--

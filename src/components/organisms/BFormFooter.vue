@@ -79,5 +79,17 @@ export default {
       return true;
     },
   },
+  watch: {
+    '$store.state.currentQuestion': {
+      handler (questionIndex) {
+        const el = document.querySelector(`[uid=${this.$store.getters.questionItems[questionIndex - 1] && this.$store.getters.questionItems[questionIndex - 1].id}]`)
+        if (el) {
+          el.scrollIntoView();
+        }
+      },
+      deep: true,
+      immediate: true,
+    },
+  },
 };
 </script>

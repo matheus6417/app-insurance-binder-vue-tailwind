@@ -1,7 +1,7 @@
 <template>
   <div
     class="flex mx-auto w-full cursor-pointer min-h-20"
-    @click="$emit('change', option.title)"
+    @click="$emit('setAnswer', option.title)"
   >
     <div
       class="bg-white rounded p-4 flex shadow hover:shadow-md w-full"

@@ -17,7 +17,7 @@
       }"
       :class="inputData ? 'bg-white' : 'opacity-50 cursor-not-allowed'"
       :disable="!inputData"
-      @click.once="inputData ? $emit('change', inputData) : void 0"
+      @click.once="inputData ? $emit('setAnswer', inputData) : void 0"
     >
       <span
         class="mr-2"

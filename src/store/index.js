@@ -327,10 +327,7 @@ export default createStore({
       state.currentQuestion = step
     },
     setFormAnswer(state, data) {
-      console.log(data)
       state.appCustomData.componentsLibrary[data.questionID].props['answer'] = data.answer
-      console.log(state.appCustomData.componentsLibrary[data.questionID].props)
-      
     },
   }
 });  

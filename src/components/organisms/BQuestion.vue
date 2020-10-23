@@ -14,7 +14,7 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <BOption
           :choosen="$attrs.answer === option.title"
-          @change="setFormAnswer"
+          @setAnswer="setFormAnswer"
           v-for="(option, i) in $attrs.options"
           :key="i"
           :option="option"
@@ -22,7 +22,7 @@
       </div>
     </template>
     <template v-if="$attrs.type === 'text'">
-      <BInput @change.once="setFormAnswer"></BInput>
+      <BInput @setAnswer.once="setFormAnswer"></BInput>
     </template>
   </div>
 </template>

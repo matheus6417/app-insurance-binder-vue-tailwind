@@ -7,8 +7,9 @@
     "build": "cross-env NODE_ENV=production vite build"
   },
   "dependencies": {
+    "feather-icons": "^4.28.0",
     "tailwindcss": "^1.9.4",
-    "vue": "next",
+    "vue": "^3.0.1",
     "vue-router": "^4.0.0-beta.13",
     "vuex": "^4.0.0-beta.2"
   },

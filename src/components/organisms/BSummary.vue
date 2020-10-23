@@ -1,5 +1,7 @@
 <template>
-  <div>BSummary</div>
+  <div>BSummary:
+    {{$store.state.formAnswers}}
+  </div>
 </template>
 
 <script>

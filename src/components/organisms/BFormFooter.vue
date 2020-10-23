@@ -10,9 +10,13 @@
             $attrs.color ? $attrs.color : 'white_default'
           ].color,
       }">
-    <span class="my-auto">
+    <span class="my-auto" v-if="$store.state.currentQuestion <= questionItems.length">
       {{$store.state.currentQuestion}}/{{questionItems.length}}
     </span>
+    <span class="my-auto" v-else>
+      Completed!
+    </span>
+
     <div class="inline-flex">
       <button class="bg-white hover:bg-gray-200 py-1 px-1 rounded mr-1"
        :disable="!canGoTo('prev')"
@@ -40,8 +44,8 @@ export default {
   name: "BFormFooter",
   methods:{
     canGoTo(to){
-      if (to === 'next' && this.$store.state.currentQuestion === this.questionItems.length) { return false}
-      if (to === 'prev' && this.$store.state.currentQuestion === 1) { return false}
+      if (to === 'next' && this.$store.state.currentQuestion >= this.questionItems.length) { return false}
+      if (to === 'prev' && this.$store.state.currentQuestion <= 1) { return false}
       return true
     }
   },

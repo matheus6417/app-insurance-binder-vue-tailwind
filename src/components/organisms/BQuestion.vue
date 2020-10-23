@@ -1,7 +1,7 @@
 <template>
   <div
     class="mb-8 mx-auto w-full md:max-w-2xl px-6 text-3x1"
-    :class="isCurrentQuestionFocused ? '' : 'opacity-25'"
+    :class="isCurrentQuestionFocused ? '' : 'opacity-25 pointer-events-none'"
   >
     <BListItem
       class="mb-12 text-4x1"
@@ -22,7 +22,9 @@
       </div>
     </template>
     <template v-if="$attrs.type === 'text'">
-      <BInput></BInput>
+      <BInput
+          @change.once="setFormAnswer"
+      ></BInput>
     </template>
   </div>
 </template>
@@ -44,6 +46,7 @@ export default {
         questionID: this.$attrs.uid,
         answer: answer
       });
+      this.$store.commit('changeCurrentQuestion', this.$store.state.currentQuestion + 1)
     }
   },
   computed: {

@@ -73,6 +73,14 @@ export default createStore({
               type: 'form'
             },
             {
+              id: 'BQuestion-ownyourdesign',
+              type: 'form'
+            },
+            {
+              id: 'BQuestion-buildingcoverage',
+              type: 'form'
+            },
+            {
               id: 'BButtons-getquotes',
             },
             {
@@ -168,6 +176,44 @@ export default createStore({
                 title: 'Cyber',
                 text: 'Internet-bsed risks (CLIC)',
                 icon: 'wifi',
+              }
+            ]
+          },
+          component: 'BQuestion',
+        },
+        'BQuestion-ownyourdesign': {
+          src: 'organisms/BQuestion.vue',
+          props: {
+            type: 'options',
+            text: 'Do you do your own design?',
+            icon: '3',
+            options: [
+              {
+                title: 'Yes',
+                text: 'We do designs in-house',
+                icon: 'droplet',
+              }, {
+                title: 'No',
+                text: 'We’re gonna need some assistance',
+                icon: 'airplay',
+              }
+            ]
+          },
+          component: 'BQuestion',
+        },
+        'BQuestion-buildingcoverage': {
+          src: 'organisms/BQuestion.vue',
+          props: {
+            type: 'options',
+            text: 'Include building coverage?',
+            icon: '4',
+            options: [
+              {
+                title: 'Yes',
+                icon: 'thumbs-up',
+              }, {
+                title: 'No',
+                icon: 'thumbs-down',
               }
             ]
           },

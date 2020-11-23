@@ -39,5 +39,12 @@ export default {
       });
     },
   },
+  beforeMount (){
+      window.WebFont.load({
+        google: {
+          families: ['Roboto', `Roboto:bold`, 'Roboto:medium'],
+        },
+      })
+  }
 };
 </script>

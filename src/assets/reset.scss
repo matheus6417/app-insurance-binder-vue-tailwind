@@ -1,0 +1,271 @@
+
+html {
+	-webkit-text-size-adjust: 100%;
+	line-height: 1.5;
+	font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+}
+details {
+	display: block;
+}
+main {
+	display: block;
+}
+h1 {
+	font-size: 2em;
+	margin: 0;
+	font-size: inherit;
+	font-weight: inherit;
+}
+code {
+	font-size: 1em;
+}
+kbd {
+	font-size: 1em;
+}
+pre {
+	font-size: 1em;
+	margin: 0;
+}
+samp {
+	font-size: 1em;
+}
+a {
+	background-color: transparent;
+	color: inherit;
+	text-decoration: inherit;
+}
+abbr[title] {
+	border-bottom: none;
+	-webkit-text-decoration: underline dotted;
+	text-decoration: underline dotted;
+}
+b {
+	font-weight: bolder;
+}
+strong {
+	font-weight: bolder;
+}
+small {
+	font-size: 80%;
+}
+sub {
+	@extend %default_alignment;
+	bottom: -.25em;
+}
+sup {
+	@extend %default_alignment;
+	top: -.5em;
+}
+button {
+	@extend %default_inherited;
+	overflow: visible;
+	text-transform: none;
+	-webkit-appearance: button;
+	background-color: transparent;
+	background-image: none;
+	cursor: pointer;
+	&:-moz-focusring {
+		outline: ButtonText dotted 1px;
+	}
+	&:focus {
+		outline: 0;
+	}
+}
+input {
+	@extend %default_inherited;
+	overflow: visible;
+	@extend %default_inputs;
+	&:-ms-input-placeholder {
+		color: $lightgrey_default;
+	}
+	&:focus {
+		@extend %default_inputs;
+	}
+}
+optgroup {
+	@extend %default_inherited;
+}
+select {
+	@extend %default_inherited;
+	text-transform: none;
+}
+textarea {
+	@extend %default_inherited;
+	overflow: auto;
+	resize: vertical;
+	&:-ms-input-placeholder {
+		color: $lightgrey_default;
+	}
+}
+[type=button] {
+	-webkit-appearance: button;
+	&:-moz-focusring {
+		outline: ButtonText dotted 1px;
+	}
+}
+[type=button]::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
+}
+button::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
+}
+legend {
+	box-sizing: border-box;
+	color: inherit;
+	display: table;
+	max-width: 100%;
+	padding: 0;
+	white-space: normal;
+}
+progress {
+	vertical-align: baseline;
+}
+[type=number]::-webkit-inner-spin-button {
+	height: auto;
+}
+[type=number]::-webkit-outer-spin-button {
+	height: auto;
+}
+summary {
+	display: list-item;
+}
+template {
+	display: none;
+}
+blockquote {
+	margin: 0;
+}
+dd {
+	margin: 0;
+}
+dl {
+	margin: 0;
+}
+figure {
+	margin: 0;
+}
+h2 {
+	margin: 0;
+	font-size: inherit;
+	font-weight: inherit;
+}
+h3 {
+	margin: 0;
+	font-size: inherit;
+	font-weight: inherit;
+}
+h4 {
+	margin: 0;
+	font-size: inherit;
+	font-weight: inherit;
+}
+h5 {
+	margin: 0;
+	font-size: inherit;
+	font-weight: inherit;
+}
+h6 {
+	margin: 0;
+	font-size: inherit;
+	font-weight: inherit;
+}
+hr {
+	margin: 0;
+	box-sizing: content-box;
+	height: 0;
+	overflow: visible;
+	border-top-width: 1px;
+}
+p {
+	margin: 0;
+}
+fieldset {
+	margin: 0;
+	padding: 0;
+}
+ol {
+	@extend %default_lists;
+}
+ul {
+	@extend %default_lists;
+}
+* {
+	box-sizing: border-box;
+	border: 0 solid transparent;
+}
+::after {
+	box-sizing: border-box;
+	border: 0 solid transparent;
+}
+::before {
+	box-sizing: border-box;
+	border: 0 solid transparent;
+}
+img {
+	border-style: solid;
+	display: block;
+	vertical-align: middle;
+	max-width: 100%;
+	height: auto;
+}
+input::-moz-placeholder {
+	color: $lightgrey_default;
+}
+textarea::-moz-placeholder {
+	color: $lightgrey_default;
+}
+input::placeholder {
+	color: $lightgrey_default;
+}
+textarea::placeholder {
+	color: $lightgrey_default;
+}
+table {
+	border-collapse: collapse;
+}
+audio {
+	display: block;
+	vertical-align: middle;
+}
+canvas {
+	display: block;
+	vertical-align: middle;
+}
+embed {
+	display: block;
+	vertical-align: middle;
+}
+iframe {
+	display: block;
+	vertical-align: middle;
+}
+object {
+	display: block;
+	vertical-align: middle;
+}
+svg {
+	display: block;
+	vertical-align: middle;
+}
+video {
+	display: block;
+	vertical-align: middle;
+	max-width: 100%;
+	height: auto;
+}
+body {
+	margin: 0;
+	font-family: $font_0, $font_1, $font_2;
+	color: $black_default;
+}
+::-webkit-scrollbar {
+	width: 0;
+	height: 0;
+}
+::-webkit-scrollbar-thumb {
+	width: 0;
+	height: 0;
+}

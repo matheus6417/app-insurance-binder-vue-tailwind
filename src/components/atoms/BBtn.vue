@@ -1,13 +1,7 @@
 <template>
   <button
-    class="hover:opacity-75 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow-md w-full md:max-w-xs"
-    :style="{
-      backgroundColor:
-        $store.state.appCustomData.globalProps.colors[
-          $attrs.color ? $attrs.color : 'primary_default'
-        ].color,
-    }"
-    :class="isValid ? '' : 'opacity-50 cursor-not-allowed'"
+    class="BBtn"
+    :class="isValid ? '' : 'BBtn--disabled'"
     :disable="!isValid"
     @click="isValid ? clickAction(action) : void 0"
   >
@@ -44,5 +38,5 @@ export default {
       }
     },
   },
-};
+}
 </script>

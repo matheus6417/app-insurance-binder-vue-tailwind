@@ -1,11 +1,11 @@
 import { createApp } from 'vue'
-import './assets/main.css'
+import './assets/main.scss'
 import App from './App.vue'
 import store from './store'
 import { routes } from './routes.js'
 import { createRouter, createWebHistory } from 'vue-router'
+import VueTheMask from 'vue-the-mask'
 let app = createApp(App)
-
 
 let router = createRouter({
   history: createWebHistory(),
@@ -28,7 +28,5 @@ if (import.meta.hot) {
     router.replace('')
   })
 }
-app.use(store)
-app.use(router)
 
-app.mount('#app')
+app.use(VueTheMask).use(store).use(router).mount('#app')

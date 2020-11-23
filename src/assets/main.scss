@@ -1,0 +1,787 @@
+@import 'variables';
+@import 'reset';
+.BAvatar {
+	color: $blue_default;
+	background: $secondary_default;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 9999px;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	box-shadow: 0 1px 2px 0 $box_shadow3;
+	font-weight: 700;
+}
+.BAvatar__slot {
+	margin: auto;
+	font-size: 1.125rem;
+}
+.BAvatar--lg {
+	height: 6.25rem;
+	width: 6.25rem;
+}
+.BAvatar--sm {
+	height: 2.25rem;
+	width: 2.25rem;
+	min-width: 2.25rem;
+}
+.BBtn {
+	background: $primary_default;
+	box-shadow: $box_shadow0 0 4px 4px;
+	border-radius: .5rem;
+	transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+	transition-duration: .3s;
+	transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+	font-weight: 700;
+	font-size: 1.125rem;
+	width: 100%;
+	padding: .75rem 1rem;
+	&:hover {
+		opacity: .75;
+	}
+	&:focus {
+		opacity: 1;
+		outline: transparent solid 2px;
+		outline-offset: 2px;
+	}
+}
+.BBtn--disabled {
+	opacity: .5;
+	cursor: not-allowed;
+}
+.BDate__icon {
+	line-height: 1.375;
+	text-align: center;
+	width: 2rem;
+	right: 0;
+	top: 0;
+	padding: .25rem;
+	margin-left: 1.5rem;
+}
+.BDate__input-wrapper {
+	position: relative;
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+.BDate__input {
+	border-bottom: 1px solid $black_default;
+	max-width: 240px;
+	padding-top: .5rem;
+	padding-bottom: .5rem;
+	margin-bottom: 1.25rem;
+}
+.BDate__wrapper {
+	padding-left: 1rem;
+	padding-right: 1rem;
+	margin-bottom: 2.5rem;
+}
+.BDate__field {
+	font-size: 1.25rem;
+	padding: .25rem .5rem;
+	color: $blue_default !important;
+	width: 100%;
+	margin-right: .75rem;
+}
+.BFormBtn-content {
+	color: $blue_default;
+	margin-right: .5rem;
+}
+.BFormBtn--disabled {
+	opacity: .5;
+	cursor: not-allowed;
+}
+.BFormBtn {
+	background: $secondary_default;
+	border-radius: .25rem;
+	font-size: 1.125rem;
+	display: flex;
+	font-weight: 700;
+	box-shadow: 0 4px 6px -1px $box_shadow1, 0 2px 4px -1px $box_shadow2;
+	padding: .75rem 1.25rem;
+	&:hover {
+		opacity: .75;
+	}
+}
+.BFormErrors {
+	position: relative;
+	ul {
+		margin-top: -1.25rem;
+		top: 0;
+	}
+	span {
+		font-size: .875rem;
+		color: $red_default;
+		&:after {
+			content: ". ";
+		}
+	}
+}
+.BInput {
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+.BInput__wrapper {
+	border-bottom: 1px solid $black_default;
+	display: flex;
+	align-items: center;
+	padding-top: .5rem;
+	padding-bottom: .5rem;
+	margin-bottom: 3rem;
+}
+.BInput__field {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-color: transparent;
+	border-style: none;
+	width: 100%;
+	margin-right: .75rem;
+	line-height: 1.25;
+	font-size: 1.25rem;
+	padding: .25rem .5rem;
+	color: $blue_default !important;
+	&:focus {
+		outline: transparent solid 2px;
+		outline-offset: 2px;
+	}
+}
+.BLink {
+	color: $blue_default;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	text-decoration: underline;
+	justify-content: center;
+}
+.BModal__inner {
+	margin: auto;
+	overflow-y: auto;
+	padding: 3rem 1.2rem;
+	height: calc(100vh - 5rem);
+}
+.BModal__header-close {
+	cursor: pointer;
+	padding: .5rem;
+}
+.BModal__header {
+	display: flex;
+	justify-content: space-between;
+	margin: 1.5rem 1.5rem .5rem;
+	padding-top: .25rem;
+	padding-bottom: .25rem;
+	top: 0;
+}
+.BModal__content {
+	height: 100%;
+	text-align: left;
+	flex-direction: column;
+	justify-content: center;
+	vertical-align: middle;
+	position: relative;
+	overflow: auto;
+}
+.BModal__wrapper {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.BModal__overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(26, 32, 44, 1);
+	opacity: .5;
+}
+.BModal__card {
+	background-color: $white_bg_modal;
+	width: 100%;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: .25rem;
+	z-index: 10;
+	overflow: auto;
+}
+.BModal__header-logo {
+	width: 130px;
+	padding: .5rem .25rem;
+}
+.BPoweredBy {
+	color: $lightgrey_default;
+	font-size: 14px;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	padding-top: .5rem;
+	padding-bottom: .5rem;
+}
+.BRating__wrapper {
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	justify-content: center;
+}
+.BSelect {
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+.BSelect__options-wrapper {
+	position: absolute;
+	box-shadow: 0 1px 3px 0 $box_shadow1, 0 1px 2px 0 $box_shadow2;
+	z-index: 40;
+	width: 100%;
+	left: 0;
+	height: 100vh;
+	border-radius: .25rem;
+	overflow-y: auto;
+}
+.BSelect__icon {
+	z-index: 10;
+	height: 100%;
+	font-weight: 400;
+	text-align: center;
+	position: absolute;
+	background-color: transparent;
+	font-size: 1rem;
+	align-items: center;
+	justify-content: center;
+	width: 2rem;
+	right: 0;
+	padding-right: .75rem;
+	padding-top: .75rem;
+	padding-bottom: .75rem;
+}
+.BSelect__wrapper {
+	position: relative;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	padding-top: .5rem;
+	padding-bottom: .5rem;
+	margin-bottom: 1.25rem;
+}
+.BSelect__options-list {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	&:focus {
+		background-color: transparent;
+	}
+}
+.BSelect__options-item {
+	display: flex;
+	cursor: pointer;
+	width: 100%;
+	align-items: center;
+	padding: .75rem .75rem .75rem .5rem;
+	border-color: transparent;
+	background-color: rgba(255, 255, 255, 1);
+	border-left-width: 2px;
+	position: relative;
+	&:hover {
+		background-color: rgba(247, 250, 252, 1);
+	}
+}
+.BButtons__wrapper {
+	display: flex;
+	margin-bottom: 3rem;
+	margin-left: .75rem;
+	margin-right: .75rem;
+}
+.BButtons__wrapper--center {
+	justify-content: center;
+}
+.BButtons__wrapper--start {
+	justify-content: flex-start;
+}
+.BListItem__wrapper {
+	display: flex;
+	margin-bottom: 1.5rem;
+	margin-left: .5rem;
+	margin-right: .5rem;
+}
+.BListItem__content {
+	position: relative;
+	display: flex;
+}
+.BListItem__text {
+	margin: auto;
+}
+.BListItem--sm {
+	font-size: 18px;
+	line-height: 1.17em;
+}
+.BListItem--md {
+	font-size: 24px;
+	line-height: 1.17em;
+	font-weight: 700;
+	padding-right: .75rem;
+}
+.BListItem__description {
+	font-size: .75rem;
+	transform: translateY(2rem);
+	position: absolute;
+	bottom: 0;
+}
+.BListItem__wrapper--md {
+	margin-bottom: 4.5rem;
+}
+.BListItem__avatar {
+	margin: auto 1.25rem auto 0;
+}
+.BOption__content-text {
+	font-size: .75rem;
+}
+.BOption__content-title {
+	font-weight: 700;
+	font-size: 1.25rem;
+}
+.BOption__card {
+	box-shadow: 0 4px 4px $box_shadow1;
+	border: 1px solid $lightgrey_default;
+	background-color: rgba(255, 255, 255, 1);
+	border-radius: .25rem;
+	padding: 1rem;
+	display: flex;
+	width: 100%;
+	transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+	transition-duration: .3s;
+	transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+	&:hover {
+		box-shadow: 0 10px 15px -3px $box_shadow1, 0 4px 6px -2px $box_shadow3;
+	}
+}
+.BOption__wrapper {
+	min-height: 5.5rem;
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	cursor: pointer;
+	width: calc(100% - 1rem);
+}
+.BOption--active {
+	border: 2px solid $blue_default;
+}
+.BOption__content {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+.BOption__icon {
+	margin: auto 1rem auto .25rem;
+}
+.Bcheckout__selected {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: .75rem;
+	display: flex;
+	justify-content: center;
+	margin-top: .5rem;
+}
+.BCheckout__grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	grid-gap: 2.5rem;
+	gap: 2.5rem;
+}
+.BCheckout__label-wrapper {
+	width: 100%;
+	display: flex;
+	margin-bottom: .75rem;
+}
+.BCheckout__wrapper {
+	padding-left: .75rem;
+	padding-right: .75rem;
+	max-width: 32rem;
+	margin: 2.5rem auto .5rem;
+}
+.BCheckout__label {
+	color: $black_default;
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+.BCheckout__label-cardbrandswrapper {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: .75rem;
+}
+.BCheckout__label-cardbrands {
+	width: 70px;
+	height: 14px;
+	margin-top: auto;
+	background-size: contain;
+	margin-bottom: auto;
+	background-image: $cardimages;
+}
+.BFormFooter__pagination-button--active {
+	background-color: rgba(255, 255, 255, 1);
+}
+.BFormFooter__pagination-button--inactive {
+	background-color: rgba(203, 213, 224, 1);
+	cursor: not-allowed;
+}
+.BFormFooter__pagination-button {
+	padding: .45rem;
+	border-radius: .25rem;
+	&:hover {
+		background-color: rgba(237, 242, 247, 1);
+	}
+	&:first-child {
+		margin-right: .5rem;
+	}
+}
+.BFormFooter__pagination-wrapper {
+	display: inline-flex;
+	margin-left: .75rem;
+	margin-right: .75rem;
+}
+.BFormFooter__pagenumber {
+	margin-top: auto;
+	margin-bottom: auto;
+	padding-left: .5rem;
+	padding-right: .5rem;
+}
+.BFormFooter__wrapper {
+	background: $blue_default;
+	padding: .5rem 1.25rem .75rem;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	color: $white;
+	display: flex;
+	justify-content: space-between;
+}
+.BList {
+	width: 100%;
+	margin-bottom: 2rem;
+	padding: .75rem .25rem;
+}
+.BPlan__btn-wrapper {
+	position: relative;
+	display: flex;
+	padding-top: 2rem;
+	margin-left: .25rem;
+	margin-right: .25rem;
+	margin-bottom: 1.5rem;
+}
+.BPlan__btn {
+	padding-left: 0;
+	padding-right: 0;
+	margin: 0;
+}
+.BPlan__img-wrapper {
+	margin-top: .5rem;
+	margin-bottom: .5rem;
+	height: 3rem;
+	display: flex;
+	img {
+		margin: auto;
+	}
+}
+.BPlans__cards-wrapper {
+	transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+	transition-duration: .3s;
+	transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+	flex-direction: column;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	cursor: pointer;
+}
+.BPlans-selectedcoverage {
+	display: flex;
+	justify-content: center;
+	max-width: 20rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+.BPlans-grid {
+	display: grid;
+	grid-template-columns: repeat(1, minmax(0, 1fr));
+	grid-gap: 1.25rem;
+	gap: 1.25rem;
+}
+.BPlans {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: .75rem;
+	padding-right: .75rem;
+	margin-bottom: 2.5rem;
+}
+.BPlan__rating-wrapper {
+	margin-bottom: .5rem;
+	margin-top: 0;
+}
+.BPlan__card {
+	border: 1px solid $lightgrey_default;
+	background-color: $white;
+	box-shadow: 0 4px 6px -1px $box_shadow1, 0 2px 4px -1px $box_shadow2;
+	border-radius: .25rem;
+	padding: 1rem;
+	flex-direction: column;
+	width: 100%;
+	text-align: center;
+	transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+	transition-duration: .3s;
+	transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+	&:hover {
+		box-shadow: 0 10px 15px -3px $box_shadow1, 0 4px 6px -2px $box_shadow3;
+	}
+}
+.BPlan__price {
+	font-size: 2.7rem;
+	font-weight: 700;
+}
+.BPlan__price--period {
+	font-size: 1.25rem;
+	font-weight: 400;
+}
+.BPlan__card--active {
+	border: 2px solid $blue_default;
+}
+.BPlan__subprice {
+	margin-top: 0;
+	font-weight: 700;
+	margin-bottom: 1rem;
+	color: $darkgrey_default;
+}
+.BQuestion {
+	padding-top: 3rem;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+.BQuestion--options-grid {
+	display: grid;
+	grid-template-columns: repeat(1, minmax(0, 1fr));
+	grid-gap: 1.25rem;
+	gap: 1.25rem;
+}
+.BQuestion--focused {
+	opacity: .25;
+	pointer-events: none;
+	transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+	transition-duration: .3s;
+	transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+}
+.BQuestion__BlistItem {
+	margin-bottom: 1.5rem;
+	margin-left: 0;
+}
+.BSummary {
+	width: 100%;
+	padding-left: .75rem;
+	padding-right: .75rem;
+	margin-bottom: 2.5rem;
+}
+.BSummary__title {
+	font-weight: 700;
+	font-size: 1.25rem;
+	margin-bottom: 1rem;
+}
+.BSummary__answer {
+	color: $blue_default;
+	text-decoration: underline;
+}
+.BTitle__wrapper {
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	margin-bottom: 2.5rem;
+	max-width: 28rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+.BTitle__avatar {
+	margin-bottom: 2.5rem;
+}
+.BTitle__title {
+	font-weight: 700;
+}
+.BTitle__text {
+	padding-left: .5rem;
+	padding-right: .5rem;
+	font-size: 1.25rem;
+}
+.BTitle--lg {
+	font-size: 2.5rem;
+}
+@media(min-width:$screen-sm) {
+	.BAvatar--sm {
+		margin-left: .5rem;
+	}
+	.BBtn {
+		max-width: 20rem;
+	}
+	.BDate__input {
+		margin-bottom: 2rem;
+	}
+	.BDate__wrapper {
+		margin-bottom: 1rem;
+		padding: 1rem 0;
+	}
+	.BInput__wrapper {
+		margin-bottom: 2rem;
+	}
+	.BInput {
+		padding: 1rem 0;
+	}
+	.BLink {
+		padding-top: 1.25rem;
+		padding-bottom: 1.25rem;
+	}
+	.BModal__inner {
+		padding: 1rem 1.2rem;
+		height: 40rem;
+	}
+	.BModal__header-logo {
+		width: 160px;
+		padding-left: .5rem;
+		padding-right: .5rem;
+	}
+	.BModal__card {
+		margin-left: 2.5rem;
+		margin-right: 2.5rem;
+		height: auto;
+		max-width: 48rem;
+	}
+	.BModal__header {
+		margin: .5rem 1rem;
+	}
+	.BSelect__wrapper {
+		margin-bottom: 2rem;
+	}
+	.BSelect {
+		padding: 1rem 0;
+	}
+	.BButtons__wrapper {
+		margin-bottom: .5rem;
+		margin-left: 2.5rem;
+		margin-right: 2.5rem;
+	}
+	.BListItem__wrapper {
+		margin-right: auto;
+		margin-left: 0;
+		justify-content: flex-start;
+	}
+	.BListItem__wrapper--md {
+		padding: 1rem 0;
+		margin-bottom: 1.75rem;
+	}
+	.BListItem--md {
+		font-size: 32px;
+		padding-right: 1rem;
+	}
+	.blistavatar--md {
+		margin: 1rem;
+	}
+	.BListItem__description {
+		font-size: 1.125rem;
+	}
+	.BOption__content-title {
+		font-size: .875rem;
+	}
+	.BOption__content-text {
+		font-size: .62rem;
+	}
+	.BOption__wrapper {
+		min-height: 4.75rem;
+		width: calc(100% - .5rem);
+	}
+	.BOption__card {
+		padding: .75rem;
+	}
+	.BOption__icon {
+		margin-right: .75rem;
+	}
+	.BCheckout__label-cardbrands {
+		width: 100px;
+		height: 20px;
+	}
+	.BCheckout__label {
+		font-size: 1.125rem;
+	}
+	.BList {
+		max-width: 32rem;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.BPlan__btn-wrapper {
+		padding-top: 1.5rem;
+		margin-left: 0;
+		margin-right: 0;
+		margin-bottom: .5rem;
+	}
+	.BPlan__btn {
+		margin: 0;
+		padding-top: .5rem;
+		padding-bottom: .5rem;
+		font-size: 1rem;
+	}
+	.BPlan__img-wrapper {
+		padding-left: .75rem;
+		padding-right: .75rem;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	.BPlans {
+		padding-left: 4rem;
+		padding-right: 4rem;
+	}
+	.BPlans-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		grid-gap: 2.5rem;
+		gap: 2.5rem;
+	}
+	.BPlan__rating-wrapper {
+		margin-bottom: 2.5rem;
+	}
+	.BPlan__price {
+		font-size: 2rem;
+		font-weight: 700;
+	}
+	.BPlan__subprice {
+		font-size: .75rem;
+	}
+	.BQuestion {
+		padding-left: 2.5rem;
+		padding-right: 2.5rem;
+		padding-top: 2.5rem;
+		margin-bottom: 1rem;
+	}
+	.BQuestion--options-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+	}
+	.BSummary {
+		max-width: 42rem;
+		padding-left: 4rem;
+		padding-right: 4rem;
+	}
+	.BTitle--lg {
+		font-size: 2.75rem;
+	}
+	.BTitle__avatar {
+		margin-bottom: 2rem;
+	}
+	.BTitle__wrapper {
+		margin-bottom: 2rem;
+	}
+	.BFormErrors ul {
+		padding-bottom: .5rem;
+	}
+}

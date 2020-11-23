@@ -1,9 +1,10 @@
 <template>
-  <div class="mb-10 mx-auto w-full md:max-w-lg">
+  <div class="BList">
     <BListItem
       v-for="(item, i) in $attrs.Items"
       :item="item"
       :key="i"
+      :size="'sm'"
     ></BListItem>
   </div>
 </template>

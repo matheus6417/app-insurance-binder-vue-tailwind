@@ -1,0 +1,75 @@
+//grid
+$screen-xs:           375px;
+$screen-sm:           640px;
+$screen-md:           992px;
+$screen-lg:           1140px;
+$screen-xlg:          1900px;
+
+
+//colors
+$black_default: #333;
+$black: #000;
+$blue_default: #0074d9;
+$darkgrey_default: #828282;
+$lightgrey_default: #bdbdbd;
+$primary_default: #71f79f;
+$red_default: #EB5757;
+$secondary_default: #a8daff;
+$white_bg_modal: #f9f9f9;
+$white: #fff;
+
+$box_shadow0: rgba(0, 0, 0, .25);
+$box_shadow1: rgba(0, 0, 0, .1);
+$box_shadow2: rgba(0, 0, 0, .06);
+$box_shadow3: rgba(0, 0, 0, .05);
+
+$font_0: "Roboto";
+$font_1: "Arial";
+$font_2: "sans-serif";
+
+//urls
+$cardimages: url("data:image/webp;base64,UklGRnoDAABXRUJQVlA4WAoAAAAQAAAARgAADgAAQUxQSIMAAAABcFTb1rLc33/cHUbfCJdXgAhEIcLfgAhEI4r9dj8ezCNiAqQs1GrpdrvdEECl2+229PQk09SNpA89yuVu85Yxl/ITRvK0+Uj1hNnQsKQYDULd/rv9ryitYkkxGiqUHuGc2LymMMzb5OzbIHxle5naL8LJPrVsQAkQRVHkAfCiKIoAAABWUDgg0AIAANAOAJ0BKkcADwA+iTSVR6UioiEzKACgEQlsAJ0yhHN/rX4jfkB0nfALYZwJx54y/UByuX6ze4D9SfUB+s3rM9GB1Fu8teVHdqeJHkdsBNAUiHknmLf9b+1edZ6qsQLgGAZw/fplXcpASf4RDFnjzjtoj34WGityInFBFbOnyAAA/vZfR6l6pPCni7OeRPi+D3Poe2P/isAv9wQ5p3flz66QkzqykXLhEpOl+FE8a//6XA2XyV689f4K5f+Q6vz3ir0DpyrYdNmgUn2FAPnq5GY/mvWrIsFkNH/8sXZsA76t/1NeWJav/0ZAGBd0Cr1qNhYOjidc6hNxhMf6fcltm8XUx/y5EaWKsb5Yqv5nVIVnr90EY1YYb6AfX0i+FGee24erM7sZg954f0x5ePczHm0Z6ko/8I3ez7VNF5iqAEXMUjh0jvo+KiSmuddmOzW1Q0mt7eb+v2GJM1YKXrj+GTajmmiuvOrpVWPX3mw/yNyX7S/QuDMvYdgqctsDFCkxtHGrQpd5e9f6Jv2vXQSgfmXHR0j4UM6n7HRMtubWyzuHv/40hF3fv8mzNNJbSV570Xwm+iZ5BqbQPf1w21ZDvgTnMA47X0H3iXIhZjV5K9EJcU+cCYk4qN8p4Pd9eUAFBJgBaMGj8kvHbUntHjyLgthIm4YFQ3sXMjCUhbzPY6mQlfhgvGBiXBSmRYNnK8w+jHOuzGANKMnaD5PQ8ExVTGTfhW5fEgYkx5INXvQwgxVhXCZOK8UczqKOzFHePq0P7OYQdNf9NH5m7aUWZ3PnD+3BRH/OuzCwL2MjzNXQiBbneuKFp4GHTt82362tKiVQjo/P+Rfp+koTVln4FfAKrKdxGEEy3MO6LcVulWm+wxV1gWm5Pawr4G3eyXXRIj01jrolJpf9cZIL64/oh88SES/8T6/WAVFUHi+Rwcn51g4JxthOHwU3Yrou1j0i7prAAA==");
+
+
+//@extend-elements
+//original selectors
+//sub, sup
+%default_alignment {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+//original selectors
+//button, input, optgroup, select, textarea
+%default_inherited {
+	font-family: inherit;
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+	line-height: inherit;
+	color: inherit;
+}
+
+//original selectors
+//ol, ul
+%default_lists {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+//original selectors
+//input, input:focus
+%default_inputs {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-color: transparent;
+	border-style: none;
+	line-height: 1.25;
+	outline: transparent solid 2px;
+	outline-offset: 2px;
+}
+

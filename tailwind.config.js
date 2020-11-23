@@ -12,9 +12,9 @@ module.exports = {
   },
   theme: {
     fontFamily: {
-      sans: '"Roboto"',
-      display: ['"Roboto"', '"sans-serif"'],
-      body: ['"Roboto"', '"sans-serif"'],
+      sans: 'Roboto',
+      display: ['Roboto', 'system-ui', 'sans-serif'],
+      body: ['Roboto', 'system-ui', 'sans-serif'],
     },
     extend: {}
   },

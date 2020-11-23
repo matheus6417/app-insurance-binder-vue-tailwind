@@ -1,34 +1,40 @@
 <template>
-  <div class="w-full md:max-w-2xl mx-auto">
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+  <div class="BPlans">
+    <div :class="planSelected ? 'BPlans-selectedcoverage' : 'BPlans-grid'">
       <div
-        @click="planSelected = i"
-        class="flex-col mx-auto w-full cursor-pointer"
-        v-for="(plan, i) in $attrs.plans"
+        @click="planSelected = plan.name"
+        class="BPlans__cards-wrapper"
+        v-for="(plan, i) in $attrs.plans.filter((plan) =>
+          planSelected ? plan.name === planSelected : plan
+        )"
         :key="i"
       >
         <div
-          class="bg-white rounded p-4 flex-col shadow hover:shadow-md w-full text-center"
-          :class="
-            planSelected === i
-              ? 'border-blue-500 border-4'
-              : 'border-2 border-gray-400'
-          "
+          class="BPlan__card"
+          :class="planSelected === plan.name ? 'BPlan__card--active' : ''"
         >
-          <div class="my-2 h-12 flex">
-            <img class="m-auto" :src="`img/${plan.imageSrc}.png`" />
+          <div class="BPlan__img-wrapper">
+            <img :src="`img/${plan.imageSrc}.png`" />
           </div>
-          <div class="my-2 mb-10">stars</div>
-          <div class="text-lg">
-            <span class="text-4xl text-bold">{{ plan.priceTag }}</span
-            >/{{ plan.priceTagPeriod }}
+          <div class="BPlan__rating-wrapper">
+            <BRating :rating="plan.rating"></BRating>
           </div>
-          <div class="my-none text-gray-600 text-bold mb-12">
+          <span class="BPlan__price"
+            >{{ plan.priceTag
+            }}<span class="BPlan__price--period"
+              >/{{ plan.priceTagPeriod }}</span
+            >
+          </span>
+          <div class="BPlan__subprice">
             {{ plan.subpriceTag }}
           </div>
-          <div class="relative flex">
+          <div
+            v-if="!isCheckout"
+            class="BPlan__btn-wrapper"
+            @click="planSelected = plan.name"
+          >
             <BBtn
-              class="mx-none px-none md:max-w-none m-none"
+              class="BPlan__btn"
               :text="$attrs.buttonText"
               :action="'nextstep'"
               v-bind="$attrs"
@@ -42,9 +48,16 @@
 
 <script>
 import BBtn from "../atoms/BBtn.vue";
+import BRating from '../atoms/BRating.vue';
 export default {
   components: {
+    BRating,
     BBtn,
+  },
+  computed: {
+    isCheckout() {
+      return this.$store.state.appCustomData.steps[this.$store.state.currentStep].name === 'Checkout'
+    }
   },
   data() {
     return {

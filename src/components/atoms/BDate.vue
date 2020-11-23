@@ -1,29 +1,23 @@
 <template>
-  <div class="BInput">
-    <div class="BInput__wrapper">
-      <template v-if="mask">
+  <div class="BDate__wrapper">
+    <div class="BDate__input-wrapper">
+      <div class="BDate__input">
+        
         <input
-          @input="this.errors = null"
           v-on:keyup.enter="emitAnswer"
-          class="BInput__field"
-          :type="type"
           v-model="inputdata"
           v-mask="mask"
-          masked="true"
           :placeholder="placeholder"
-        />
-      </template>
-      <template v-else>
-        <input
+          type="tel"
           @input="this.errors = null"
-          maxlength="40"
-          v-on:keyup.enter="emitAnswer"
-          class="BInput__field"
-          :type="type"
-          v-model="inputdata"
-          :placeholder="placeholder"
+          @change="this.errors = null"
+          masked="true"
+          class="BDate__field"
         />
-      </template>
+      </div>
+      <span class="BDate__icon">
+        <BIcon :icon="'calendar'" :size="34" :color="'blue_default'"></BIcon>
+      </span>
     </div>
     <BFormErrors :errors="errors"></BFormErrors>
     <BFormBtn
@@ -39,6 +33,26 @@ import BFormErrors from './BFormErrors.vue';
 import validationMixin from '../../mixins/validations'
 export default {
   mixins: [validationMixin],
+  props: {
+    placeholder: {
+      type: String,
+      default: ''
+    },
+    mask: {
+      type: String,
+      default: ''
+    },
+    type: {
+      type: String,
+      default: 'date'
+    },
+  },
+  components: {
+    BFormErrors,
+    BFormBtn,
+    BIcon,
+  },
+  name: "BSelect",
   methods:{
     emitAnswer(){
       if (this.errors && this.errors.length) return
@@ -48,30 +62,10 @@ export default {
       }
     },
   },
-  props: {
-    placeholder: {
-      type: String,
-      default: ''
-    },
-    type: {
-      type: String,
-      default: 'text'
-    },
-    mask: {
-      type: String,
-      default: ''
-    },
-  },
-  components: {
-    BFormErrors,
-    BFormBtn,
-    BIcon,
-  },
-  name: "BInput",
   data() {
     return {
       inputdata: "",
-    };
-  },
-};
+    }
+  }
+}
 </script>

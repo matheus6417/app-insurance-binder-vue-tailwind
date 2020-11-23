@@ -1,30 +1,23 @@
 <template>
-  <div
-    class="p-3 px-5 absolute w-full bottom-0 left-0 text-white flex justify-between"
-    :style="{
-      backgroundColor:
-        $store.state.appCustomData.globalProps.colors[
-          $attrs.bgColor ? $attrs.bgColor : 'blue_default'
-        ].color,
-      color:
-        $store.state.appCustomData.globalProps.colors[
-          $attrs.color ? $attrs.color : 'white_default'
-        ].color,
-    }"
-  >
+  <div class="BFormFooter__wrapper">
     <span
-      class="my-auto"
+      class="BFormFooter__pagenumber"
       v-if="$store.state.currentQuestion <= $store.getters.questionItems.length"
     >
       {{ $store.state.currentQuestion }}/{{
         $store.getters.questionItems.length
       }}
     </span>
-    <span class="my-auto" v-else> Completed! </span>
+    <span class="BFormFooter__pagenumber" v-else> Completed! </span>
 
-    <div class="inline-flex">
+    <div class="BFormFooter__pagination-wrapper">
       <button
-        class="bg-white hover:bg-gray-200 py-1 px-1 rounded mr-1"
+        class="BFormFooter__pagination-button"
+        :class="
+          canGoTo('prev')
+            ? 'BFormFooter__pagination-button--active'
+            : 'BFormFooter__pagination-button--inactive'
+        "
         :disable="!canGoTo('prev')"
         @click="
           canGoTo('prev')
@@ -34,13 +27,16 @@
               )
             : void 0
         "
-        :class="canGoTo('prev') ? 'bg-white' : 'bg-gray-400 cursor-not-allowed'"
       >
         <BIcon :icon="'chevron-up'" :color="'black_default'"></BIcon>
       </button>
       <button
-        class="hover:bg-gray-200 py-1 px-1 rounded"
-        :class="canGoTo('next') ? 'bg-white' : 'bg-gray-400 cursor-not-allowed'"
+        class="BFormFooter__pagination-button"
+        :class="
+          canGoTo('next')
+            ? 'BFormFooter__pagination-button--active'
+            : 'BFormFooter__pagination-button--inactive'
+        "
         :disable="!canGoTo('next')"
         @click="
           canGoTo('next')
@@ -58,22 +54,22 @@
 </template>
 
 <script>
-import BIcon from "../atoms/BIcon.vue";
+import BIcon from"../atoms/BIcon.vue";
 export default {
   components: {
     BIcon,
   },
-  name: "BFormFooter",
+  name:"BFormFooter",
   methods: {
     canGoTo(to) {
       if (
-        to === "next" &&
+        to ==="next" &&
         this.$store.state.currentQuestion >=
           this.$store.getters.questionItems.length
       ) {
         return false;
       }
-      if (to === "prev" && this.$store.state.currentQuestion <= 1) {
+      if (to ==="prev" && this.$store.state.currentQuestion <= 1) {
         return false;
       }
       return true;

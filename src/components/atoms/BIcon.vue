@@ -5,9 +5,8 @@
     fill="none"
     :stroke="
       $store.state.appCustomData.globalProps.colors[
-        color ? color : 'blue_default'
-      ].color
-    "
+        color || 'blue_default'
+      ].color"
     stroke-width="2"
     stroke-linecap="round"
     stroke-linejoin="round"
